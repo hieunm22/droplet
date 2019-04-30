@@ -17,8 +17,15 @@ cd /opt/lampp/
 composer install
 cd htdocs/
 git clone https://github.com/ueihhnim/chatApp.git
+mv server/ /opt/lampp/htdocs/
+mv script/ /opt/lampp/htdocs/
+mv users/ /opt/lampp/htdocs/
+mv style/ /opt/lampp/htdocs/
+mv include/ /opt/lampp/htdocs/
+mv images/ /opt/lampp/htdocs/
+mv controller/ /opt/lampp/htdocs/
 echo deploy completed!
-php /opt/lampp/htdocs/chatApp/server/websocket_server.php
+php /opt/lampp/htdocs/server/websocket_server.php
 
 # apt-get install curl
 # curl -s https://getcomposer.org/installer | php
