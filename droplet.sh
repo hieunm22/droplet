@@ -6,6 +6,7 @@ chmod +x xampp-linux-x64-7.2.2-0-installer.run
 #/etc/init.d/apache2 stop
 /opt/lampp/lampp start
 git clone https://github.com/ueihhnim/droplet.git
+mv droplet/vendor/ /opt/lampp/
 cp composer.* /opt/lampp/
 apt install composer
 cp httpd-xampp.conf /opt/lampp/etc/extra
@@ -17,13 +18,14 @@ cd /opt/lampp/
 composer install
 cd htdocs/
 git clone https://github.com/ueihhnim/chatApp.git
-mv server/ /opt/lampp/htdocs/
-mv script/ /opt/lampp/htdocs/
-mv users/ /opt/lampp/htdocs/
-mv style/ /opt/lampp/htdocs/
-mv include/ /opt/lampp/htdocs/
-mv images/ /opt/lampp/htdocs/
-mv controller/ /opt/lampp/htdocs/
+mv chatApp/*.* /opt/lampp/htdocs/
+mv chatApp/server/ /opt/lampp/htdocs/
+mv chatApp/script/ /opt/lampp/htdocs/
+mv chatApp/users/ /opt/lampp/htdocs/
+mv chatApp/style/ /opt/lampp/htdocs/
+mv chatApp/include/ /opt/lampp/htdocs/
+mv chatApp/images/ /opt/lampp/htdocs/
+mv chatApp/controller/ /opt/lampp/htdocs/
 echo deploy completed!
 php /opt/lampp/htdocs/server/websocket_server.php
 
