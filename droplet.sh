@@ -1,11 +1,12 @@
 #!/bin/bash 
+#git clone https://github.com/hieunm22/droplet.git droplet
+cd droplet
 apt-get update
 wget https://www.apachefriends.org/xampp-files/7.2.2/xampp-linux-x64-7.2.2-0-installer.run
 chmod +x xampp-linux-x64-7.2.2-0-installer.run
 ./xampp-linux-x64-7.2.2-0-installer.run
 #/etc/init.d/apache2 stop
 /opt/lampp/lampp start
-git clone https://github.com/ueihhnim/droplet.git
 mv droplet/vendor/ /opt/lampp/
 cp composer.* /opt/lampp/
 apt install composer
@@ -17,7 +18,7 @@ read -p "Run script to create database then press enter to continue"
 cd /opt/lampp/
 composer install
 cd htdocs/
-git clone https://github.com/ueihhnim/chatApp.git
+git clone https://github.com/hieunm22/chatApp.git
 mv chatApp/*.* /opt/lampp/htdocs/
 mv chatApp/server/ /opt/lampp/htdocs/
 mv chatApp/script/ /opt/lampp/htdocs/
