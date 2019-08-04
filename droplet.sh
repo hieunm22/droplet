@@ -1,6 +1,6 @@
 #!/bin/bash 
 #git clone https://github.com/hieunm22/droplet.git droplet
-cd droplet
+#cd droplet
 apt-get update
 wget https://www.apachefriends.org/xampp-files/7.2.2/xampp-linux-x64-7.2.2-0-installer.run
 chmod +x xampp-linux-x64-7.2.2-0-installer.run
